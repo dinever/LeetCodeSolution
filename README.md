@@ -16,3 +16,10 @@
     
     This problem is rather easy. It focuses more on operations on linked lists. Just scan over the two linked list and
     add each other together, remember to keep a carry bit and check the boundary conditions.
+    
+2. **[Longest Substring Without Repeating Characters](https://github.com/dinever/LeetCodeSolution/blob/master/src/LongestSubstringWithoutRepeatingCharacters.java)**
+
+    Time Complexity: O(n), Space Complexity: O(1);
+    
+    The idea is to use a hash map to track the index of the character we recently met. When we scan the string, we can
+    use the hash map to check whether we have met this character. If so, we get its index and update our `start` index.
