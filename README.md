@@ -31,3 +31,13 @@
     By the reason that the median of the two arrays should be located between the median of `nums1` and the median of
     `nums2`, a good approach is to compare the median of `nums1` and `nums2`, if the median of `nums1` is greater than
     the median of `nums2`, then we can just drop the first part of `nums2` and go on recursively. 
+
+5. **[Longest Palindromic Substring](https://github.com/dinever/LeetCodeSolution/blob/master/src/LongestPalindromicSubstring.java)**
+
+    Space Complexity: O(1);
+    
+    Scan over the input string. For every character, consider it as the middle character of a palindromic string(**Note:**
+    it can be an odd length string as well as an even length string, so it should be considered separately), then find
+    the longest palindromic string in that position, and compare the length of it with the longest palindromic substring
+    we have found.
+
