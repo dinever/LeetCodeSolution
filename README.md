@@ -41,3 +41,26 @@
     the longest palindromic string in that position, and compare the length of it with the longest palindromic substring
     we have found.
 
+6. **[ZigZag Conversion](https://github.com/dinever/LeetCodeSolution/blob/master/src/ZigZagConversion.java)**
+
+    Time Complexity: O(n), Space Complexity: O(n);
+    
+    The key to solve this problem is to calculate the position of every element in the ZigZag pattern(Note that the index starts from 0):
+ 
+    
+    ```
+    0                                       2*row - 2
+    
+    1                             2*row - 3 2*row
+    
+    2                   2*row - 4           2*row + 1
+    
+    ...             ...                     ...
+    
+    row - 2 row + 1                         3*row - 2
+    
+    row - 1                                 3*row - 3
+    ```
+    
+    Then the problem becomes easy, we can just scan over the rows. And for every row, we scan the elements in this row
+    using the result of the pattern above.
