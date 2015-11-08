@@ -17,9 +17,17 @@
     This problem is rather easy. It focuses more on operations on linked lists. Just scan over the two linked list and
     add each other together, remember to keep a carry bit and check the boundary conditions.
     
-2. **[Longest Substring Without Repeating Characters](https://github.com/dinever/LeetCodeSolution/blob/master/src/LongestSubstringWithoutRepeatingCharacters.java)**
+3. **[Longest Substring Without Repeating Characters](https://github.com/dinever/LeetCodeSolution/blob/master/src/LongestSubstringWithoutRepeatingCharacters.java)**
 
     Time Complexity: O(n), Space Complexity: O(1);
     
     The idea is to use a hash map to track the index of the character we recently met. When we scan the string, we can
     use the hash map to check whether we have met this character. If so, we get its index and update our `start` index.
+
+4. **[Median of Two Sorted Arrays](https://github.com/dinever/LeetCodeSolution/blob/master/src/MedianOfTwoSortedArrays.java)**
+
+    Time Complexity: O(log(n) + log(m)), Space Complexity: O(1);
+    
+    By the reason that the median of the two arrays should be located between the median of `nums1` and the median of
+    `nums2, a good approach is to compare the median of `nums1` and `nums2`, if the median of `nums1` is greater than
+    the median of `nums2`, then we can just drop the first part of `nums2` and go on recursively. 
