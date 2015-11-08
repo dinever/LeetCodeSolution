@@ -29,5 +29,5 @@
     Time Complexity: O(log(n) + log(m)), Space Complexity: O(1);
     
     By the reason that the median of the two arrays should be located between the median of `nums1` and the median of
-    `nums2, a good approach is to compare the median of `nums1` and `nums2`, if the median of `nums1` is greater than
+    `nums2`, a good approach is to compare the median of `nums1` and `nums2`, if the median of `nums1` is greater than
     the median of `nums2`, then we can just drop the first part of `nums2` and go on recursively. 
