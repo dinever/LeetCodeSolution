@@ -64,3 +64,15 @@
     
     Then the problem becomes easy, we can just scan over the rows. And for every row, we scan the elements in this row
     using the result of the pattern above.
+
+7. **[Reverse Integer](https://github.com/dinever/LeetCodeSolution/blob/master/src/ReverseInteger.java)**
+
+    The tricky part of this problem is to handle overflow cases. Before adding the last digit to the return value(`ret * 10 + x`), 
+    we have to check whether the answer of `ret * 10 + x` will overflow. We achieved it by this way:
+    
+    - If the answer is a positive number:
+        - If `ret > Integer.MAX_VALUE / 10`, it would cause overflow.
+        - If `ret == Integer.MAX_VALUE / 10`, but `x > Integer.MAX_VALUE % 10`, the overflow happens too.
+    - If the answer is a negative number:
+        - If `ret < Integer.MIN_VALUE / 10`, it would cause overflow.
+        - If `ret == Integer.MIN_VALUE / 10`, but `x < Integer.MIN_VALUE % 10`, the overflow happens too.
