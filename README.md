@@ -76,3 +76,13 @@
     - If the answer is a negative number:
         - If `ret < Integer.MIN_VALUE / 10`, it would cause overflow.
         - If `ret == Integer.MIN_VALUE / 10`, but `x < Integer.MIN_VALUE % 10`, the overflow happens too.
+
+9. **[Palindrome Number](https://github.com/dinever/LeetCodeSolution/blob/master/src/PalindromeNumber.java)**
+
+    Time Complexity: O(n), Space Complexity: O(1);
+
+    We reverse this integer but skip the highest digit to prevent overflow.
+
+    For example, if we have `54345`, then we reverse it and get `5434`(Skip the highest digit), then we compare 
+    `54345 / 10` with `5434` and compare the last remaining digit `x = 5`(which we skipped) with the lowest digit of the
+    original integer `54345 % 10`. If they all match, then we can say it is a Palindrome Number.
