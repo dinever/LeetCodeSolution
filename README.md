@@ -86,3 +86,11 @@
     For example, if we have `54345`, then we reverse it and get `5434`(Skip the highest digit), then we compare 
     `54345 / 10` with `5434` and compare the last remaining digit `x = 5`(which we skipped) with the lowest digit of the
     original integer `54345 % 10`. If they all match, then we can say it is a Palindrome Number.
+
+10. **[Regular Expression Matching](https://github.com/dinever/LeetCodeSolution/blob/master/src/PalindromeNumber.java)**
+
+    Time Complexity: O(n*m), Space Complexity: O(n);
+
+    This problem is a little bit difficult. We use dynamic programming to solve it. We use an array of boolean `match`.
+    Every element of `match` is corresponding to an element in the input string to be matched. For example:
+    `match[5] == true` stands for that every element after and including `s[5]` matches the regular expression.
