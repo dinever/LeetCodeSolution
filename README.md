@@ -94,3 +94,11 @@
     This problem is a little bit difficult. We use dynamic programming to solve it. We use an array of boolean `match`.
     Every element of `match` is corresponding to an element in the input string to be matched. For example:
     `match[5] == true` stands for that every element after and including `s[5]` matches the regular expression.
+
+11. **[Container With Most Water](https://github.com/dinever/LeetCodeSolution/blob/master/src/PContainerWithMostWater.java)**
+
+    Time Complexity: O(n), Space Complexity: O(1);
+    
+    In this problem, the smart scan way is to set two pointers initialized at both ends of the array. Every time move
+    the smaller value pointer to inner array. Then after the two pointers meet, all possible max cases have been scanned 
+    and the max situation is 100% reached somewhere in the scan.
